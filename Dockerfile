@@ -14,6 +14,6 @@ RUN RUSTFLAGS='-Clink-arg=-L./binaries -Clink-arg=-lstdc++' cargo install  --pat
 
 ENV RUSTC_WRAPPER mirai
 ENV RUSTFLAGS "-Z always_encode_mir"
-ENV MIRAI_FLAGS "--diag=strict"
+ENV MIRAI_FLAGS "--diag=relaxed"
 
 ENTRYPOINT [ "cargo", "build" ]
