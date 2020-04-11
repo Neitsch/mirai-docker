@@ -7,12 +7,12 @@ Dockerfile
 
 ```
 FROM neitsch/mirai:latest
-RUN mkdir /mycodee
+RUN mkdir /mycode
 ADD ./path/to/your/source/code /mycode
 WORKDIR /mycode
 ```
 
 And then run it with `docker build . -t my-project-mirai && docker run my-project-mirai`. That's it!
 
-## Configuratoin
+## Configuration
 Have a look at the Dockerfile to understand the ways in which you can configure Mirai further. The main thing you will want to consider setting is `MIRAI_FLAGS`. By default it is `--diag=relaxed`, but you might want to consider using `strict` or `paranoid` instead of `relaxed`. Have a look at [Mirai's Readme](https://github.com/facebookexperimental/MIRAI/blob/master/README.md) for all options.
